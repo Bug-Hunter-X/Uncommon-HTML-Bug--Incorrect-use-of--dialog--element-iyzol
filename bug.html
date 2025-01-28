@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug: Incorrect use of <dialog> element</title>
+</head>
+<body>
+
+<dialog open>
+  <p>This is a dialog.</p>
+  <button>Close</button>
+</dialog>
+
+<script>
+  // Attempting to close the dialog with JavaScript will not work as expected
+  // because the button is not properly associated with the dialog
+  document.querySelector('button').addEventListener('click', function() {
+    document.querySelector('dialog').close();
+  });
+</script>
+
+</body>
+</html>
