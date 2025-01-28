@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution: Correct use of <dialog> element</title>
+</head>
+<body>
+
+<dialog id="myDialog" open>
+  <p>This is a dialog.</p>
+  <button id="closeButton">Close</button>
+</dialog>
+
+<script>
+  // Get references to the dialog and button using their IDs
+  const dialog = document.getElementById('myDialog');
+  const closeButton = document.getElementById('closeButton');
+
+  // Add an event listener to the button to close the dialog
+  closeButton.addEventListener('click', function() {
+    dialog.close();
+  });
+</script>
+
+</body>
+</html>
